@@ -7,14 +7,24 @@ html(lang="en")
         title Noom
         link(rel="stylesheet", href="https://unpkg.com/mvp.css")
     body  
-        header
-            h1 Noom
-        main 
-            form#nick
-                input(type='text', placeholder='닉네임을 선택하세요', required)
-                button Save
-            ul
-            form#message
-                input(type='text', placeholder='write a messgae', required) 
-                button Send
+        header 
+            h1 Noom 
+        main
+            div#welcome
+                form
+                    input(placeholder="room name", required, type="text")
+                    button Enter Room
+                h3 Open Rooms:
+                ul
+                
+            div#room
+                h3
+                ul 
+                form#name
+                    input(placeholder="닉네임", required, type="text")
+                    button 보내기                
+                form#msg
+                    input(placeholder="message", required, type="text")
+                    button 보내기
+        script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
