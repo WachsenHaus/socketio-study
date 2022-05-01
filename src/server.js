@@ -14,7 +14,7 @@ app.get('/*', (_, res) => res.redirect('/'));
 const httpServer = http.createServer(app);
 const wsServer = new Server(httpServer, {
   cors: {
-    origin: ['https://admin.socket.io'],
+    origin: ['https://wachsenhaus.github.io', '*'],
     credentials: true,
   },
 });
